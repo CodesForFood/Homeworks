@@ -1,3 +1,5 @@
+package Week1;
+
 import java.util.Scanner;
 
 public class Day1 {
@@ -16,6 +18,8 @@ public class Day1 {
 		
 		printDivider();
 		displayPyrimidReverse(rows);
+		
+		scanner.close();
 	}
 	
 	public static void displayStairs(int rows) {		
@@ -33,8 +37,7 @@ public class Day1 {
 	}
 	
 	public static void displayPyrimid(int rows) {	
-		int maxCol = (rows * 2) - 1;
-		
+				
 		for(int i = 1; i <= rows; i++) {
 			int spaces = rows - i;
 			int stars = (i * 2) - 1;
@@ -46,8 +49,6 @@ public class Day1 {
 	}
 	
 	public static void displayPyrimidReverse(int rows) {
-		int maxCol = (rows * 2) - 1;
-		
 		for(int i = rows; i > 0; i--) {
 			int spaces = rows - i;
 			int stars = (i * 2) - 1;

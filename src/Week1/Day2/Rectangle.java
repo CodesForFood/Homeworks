@@ -1,4 +1,4 @@
-package Day2;
+package Week1.Day2;
 
 public class Rectangle implements Shape{
 
