@@ -19,7 +19,9 @@ var mainBody = document.getElementById("mainBody");
 var numPerPage = 20;
 var currentPage = 1;
 
-function displayPage(){
+function displayPage(page){
+    currentPage = page || currentPage;
+
     mainBody.innerHTML = "";
     var html = "<ul>";
 
@@ -51,6 +53,17 @@ function previousPage(){
     }
 }
 
+function showPageList(){
+    var html = "";
+    var numOfPages = Math.ceil(authorArr.length / numPerPage);
 
+    for(var i = 1; i <= numOfPages; i++){
+        html += "<span><a href='#' onclick='displayPage(" + i + ")'>" + i + " </a></span>";
+    }
+
+    document.getElementById("pageList").innerHTML = html;
+}
+
+showPageList();
 displayPage();
 
